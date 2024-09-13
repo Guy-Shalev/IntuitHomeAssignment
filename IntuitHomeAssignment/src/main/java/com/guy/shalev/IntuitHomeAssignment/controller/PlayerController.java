@@ -1,9 +1,12 @@
 package com.guy.shalev.IntuitHomeAssignment.controller;
 
+import com.guy.shalev.IntuitHomeAssignment.exception.PlayerNotFoundException;
 import com.guy.shalev.IntuitHomeAssignment.model.dto.PlayerDTO;
 import com.guy.shalev.IntuitHomeAssignment.model.reponse.Players;
 import com.guy.shalev.IntuitHomeAssignment.service.IPlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,13 +24,14 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
-    @GetMapping
-    public ResponseEntity<Players> getAllPlayers() {
-        return ResponseEntity.ok(playerService.getAllPlayers());
+    @GetMapping(value = {"", "/"})
+    public ResponseEntity<Players> getAllPlayers(@PageableDefault(size = 20) Pageable pageable) {
+        return ResponseEntity.ok(playerService.getAllPlayers(pageable));
     }
 
     @GetMapping("/{playerID}")
     public ResponseEntity<PlayerDTO> getPlayerById(@PathVariable String playerID) {
-        return ResponseEntity.ok(playerService.getPlayerById(playerID));
+        PlayerDTO player = playerService.getPlayerById(playerID);
+        return ResponseEntity.ok(player);
     }
 }
