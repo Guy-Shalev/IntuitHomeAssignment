@@ -54,6 +54,14 @@ public class PlayerMapper {
         return dto;
     }
 
+    /**
+     * Converts a string date to a LocalDate object.
+     *
+     * @param playerId   The ID of the player (for logging purposes)
+     * @param fieldName  The name of the field being converted (for logging purposes)
+     * @param dateString The date string to convert
+     * @return The converted LocalDate, or null if conversion fails
+     */
     private static LocalDate convertStringToLocalDate(String playerId, String fieldName, String dateString) {
         if (isBlank(dateString)) {
             return null;

@@ -24,11 +24,24 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
+    /**
+     * Retrieves all players with pagination support.
+     *
+     * @param pageable The pagination information
+     * @return ResponseEntity containing a Players object with paginated player data
+     */
     @GetMapping(value = {"", "/"})
     public ResponseEntity<Players> getAllPlayers(@PageableDefault(size = 20) Pageable pageable) {
         return ResponseEntity.ok(playerService.getAllPlayers(pageable));
     }
 
+    /**
+     * Retrieves a player by their unique identifier.
+     *
+     * @param playerID The unique identifier of the player
+     * @return ResponseEntity containing the PlayerDTO of the requested player
+     * @throws PlayerNotFoundException if the player is not found
+     */
     @GetMapping("/{playerID}")
     public ResponseEntity<PlayerDTO> getPlayerById(@PathVariable String playerID) {
         PlayerDTO player = playerService.getPlayerById(playerID);

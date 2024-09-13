@@ -28,6 +28,12 @@ public class PlayerService implements IPlayerService {
         this.playerRepository = playerRepository;
     }
 
+    /**
+     * Retrieves all players with pagination support.
+     *
+     * @param pageable The pagination information
+     * @return A Players object containing a list of PlayerDTOs and pagination metadata
+     */
     @Override
     public Players getAllPlayers(Pageable pageable) {
         Page<Player> playersPage = playerRepository.findAll(pageable);
@@ -44,6 +50,13 @@ public class PlayerService implements IPlayerService {
         return players;
     }
 
+    /**
+     * Retrieves a player by their unique identifier.
+     *
+     * @param playerId The unique identifier of the player
+     * @return The PlayerDTO of the requested player
+     * @throws PlayerNotFoundException if the player is not found
+     */
     @Override
     public PlayerDTO getPlayerById(String playerId) {
         return playerRepository.findById(playerId)

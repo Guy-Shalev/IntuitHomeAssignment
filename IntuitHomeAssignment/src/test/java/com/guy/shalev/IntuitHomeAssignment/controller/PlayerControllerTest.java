@@ -29,7 +29,6 @@ class PlayerControllerTest {
 
     private MockMvc mockMvc;
 
-
     @Mock
     private IPlayerService playerService;
 
