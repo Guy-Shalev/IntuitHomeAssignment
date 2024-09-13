@@ -13,6 +13,7 @@ A Spring Boot application providing an API for accessing player data.
 - [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation-and-running-without-docker)
+  - [Docker](#-docker-optional)
 - [Usage](#-usage)
 - [API Endpoints](#-api-endpoints)
 - [Testing](#-testing)
