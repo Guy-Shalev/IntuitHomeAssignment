@@ -1,5 +1,6 @@
 package com.guy.shalev.IntuitHomeAssignment.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,6 +33,7 @@ public class PlayerDTO {
     private String weight;
     private String height;
     private String bats;
+    @JsonProperty("throws")
     private String throwingHand;
     private LocalDate debut;
     private LocalDate finalGame;
