@@ -19,7 +19,7 @@ A Spring Boot application providing an API for accessing player data.
 - [Testing](#-testing)
 - [Logging](#-logging)
 - [Database](#-database)
-- [Contributing](#-contributing)
+- [Future Improvements](#-future-improvements)
 - [License](#-license)
 
 ## ✨ Features
@@ -164,11 +164,16 @@ Response: Returns detailed information about the player with ID 'johnsm01'.
 
 ## 🧪 Testing
 
-To run the tests, execute:
+To run the tests, make sure you are in the correct directory:
 
-```sh
-mvn test
-```
+1. Navigate to the project root directory:
+    ```sh
+    cd ~\IntuitHomeAssignment\IntuitHomeAssignment
+    ```
+2. Run the tests:
+    ```sh
+    mvn test
+    ```
 
 ## 📝 Logging
 
@@ -183,15 +188,17 @@ mvn test
 - Username: `sa`
 - Password: `password`
 
-## 🤝 Contributing
+## 🔮 Future Improvements
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Here are some potential improvements that could be made to enhance the application:
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+1. Improved Logging: Enhance logging throughout the application to aid in debugging and monitoring.
+2. Basic Search Functionality: Implement a simple search endpoint that allows searching players by name or birth year.
+3. Basic Caching: Implement simple in-memory caching for frequently accessed data using Spring's @Cacheable annotation.
+4. API Documentation: Add Swagger/OpenAPI documentation to make the API more user-friendly for developers.
+5. Unit Test Coverage: Increase unit test coverage, particularly for edge cases and error scenarios.
+6. Performance Profiling: Use tools like VisualVM or JProfiler to identify and address any performance bottlenecks.
+7. Data Validation: Implement more robust data validation when loading data from the CSV file.
 
 ## 📄 License
 
