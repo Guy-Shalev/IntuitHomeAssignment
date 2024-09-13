@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/IntuitHomeAssignment.iml" filepath="$PROJECT_DIR$/.idea/IntuitHomeAssignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntuitHomeAssignment/IntuitHomeAssignment.iml" filepath="$PROJECT_DIR$/IntuitHomeAssignment/IntuitHomeAssignment.iml" />
     </modules>
   </component>
 </project>

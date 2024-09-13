@@ -12,7 +12,7 @@ A Spring Boot application providing an API for accessing player data.
 - [Technologies](#-technologies)
 - [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Installation](#installation-and-running-without-docker)
 - [Usage](#-usage)
 - [API Endpoints](#-api-endpoints)
 - [Testing](#-testing)
@@ -44,8 +44,9 @@ A Spring Boot application providing an API for accessing player data.
 
 - Java 11 or higher
 - Maven 3.6 or higher
+- Docker (optional, for containerized deployment)
 
-### Installation
+### Installation and Running (Without Docker)
 
 1. Clone the repository:
    ```sh
@@ -69,10 +70,52 @@ A Spring Boot application providing an API for accessing player data.
 
 The application will start on `http://localhost:8080`.
 
+Note: This method runs the application directly on your machine without using Docker.
+
+## 🐳 Docker (Optional)
+
+If you prefer to run the application in a containerized environment, you can use Docker. This is optional and not required to run the application.
+
+### Building the Docker Image
+
+To build a Docker image for this application:
+
+1. Ensure you are in the root directory of the project (where the Dockerfile is located).
+2. Run the following command:
+
+   ```bash
+   docker build -t intuit-home-assignment .
+   ```
+This command builds a Docker image and tags it as intuit-home-assignment.
+
+### Running the Docker Container
+
+To run the application in a Docker container:
+
+   ```bash
+   docker run -p 8080:8080 intuit-home-assignment
+   ```
+This command starts a container from the intuit-home-assignment image and maps port 8080 of the container to port 8080 on your host machine.
+
+You can now access the application at http://localhost:8080, just as you would when running it without Docker.
+
+### Stopping the Docker Container
+
+To stop the running container:
+
+1. Find the container ID:
+   ```bash
+   docker ps
+   ```
+
+2. Stop the container:
+   ```bash
+   docker stop [CONTAINER_ID]
+   ```
+
 ## 🖥 Usage
 
-Once the application is running, you can use tools like cURL, Postman, or any HTTP client to interact with the API endpoints.
-
+Whether you're running the application directly on your machine or using Docker, once the application is running, you can use tools like cURL, Postman, or any HTTP client to interact with the API endpoints at http://localhost:8080.
 ## 📡 API Endpoints
 
 ### GET /api/players
