@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class IntuitHomeAssignmentApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(IntuitHomeAssignmentApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(IntuitHomeAssignmentApplication.class, args);
+    }
 
 }
